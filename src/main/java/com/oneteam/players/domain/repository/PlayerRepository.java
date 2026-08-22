@@ -1,7 +1,7 @@
 package com.oneteam.players.domain.repository;
 
-import com.oneteam.players.domain.model.Player;
-import com.oneteam.players.domain.model.PlayerId;
+import com.oneteam.players.domain.model.aggregate.Player;
+import com.oneteam.players.domain.model.valueobjects.PlayerId;
 
 import java.util.List;
 import java.util.Optional;

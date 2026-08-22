@@ -1,4 +1,9 @@
-package com.oneteam.players.domain.model;
+package com.oneteam.players.domain.model.aggregate;
+
+import com.oneteam.players.domain.model.valueobjects.Nationality;
+import com.oneteam.players.domain.model.valueobjects.PhotoUrl;
+import com.oneteam.players.domain.model.valueobjects.PlayerId;
+import com.oneteam.players.domain.model.valueobjects.PlayerName;
 
 import java.util.Objects;
 

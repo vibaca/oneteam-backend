@@ -1,6 +1,10 @@
 package com.oneteam.players.infrastructure.out.persistence;
 
-import com.oneteam.players.domain.model.*;
+import com.oneteam.players.domain.model.aggregate.Player;
+import com.oneteam.players.domain.model.valueobjects.Nationality;
+import com.oneteam.players.domain.model.valueobjects.PhotoUrl;
+import com.oneteam.players.domain.model.valueobjects.PlayerId;
+import com.oneteam.players.domain.model.valueobjects.PlayerName;
 import com.oneteam.players.domain.repository.PlayerRepository;
 import org.springframework.stereotype.Repository;
 

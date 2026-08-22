@@ -1,4 +1,4 @@
-package com.oneteam.players.domain.model;
+package com.oneteam.players.domain.model.valueobjects;
 
 import java.util.Objects;
 import java.util.UUID;

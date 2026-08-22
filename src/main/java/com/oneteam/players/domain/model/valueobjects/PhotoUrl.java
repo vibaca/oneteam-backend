@@ -1,4 +1,4 @@
-package com.oneteam.players.domain.model;
+package com.oneteam.players.domain.model.valueobjects;
 
 public record PhotoUrl(String value) {
     public PhotoUrl {

@@ -1,6 +1,6 @@
 package com.oneteam.players.domain.exception;
 
-import com.oneteam.players.domain.model.PlayerId;
+import com.oneteam.players.domain.model.valueobjects.PlayerId;
 
 public class PlayerNotFoundException extends RuntimeException {
     public PlayerNotFoundException(PlayerId id) {

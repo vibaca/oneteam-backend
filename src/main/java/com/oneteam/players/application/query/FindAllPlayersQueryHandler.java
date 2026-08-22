@@ -1,6 +1,6 @@
 package com.oneteam.players.application.query;
 
-import com.oneteam.players.domain.model.Player;
+import com.oneteam.players.domain.model.aggregate.Player;
 import com.oneteam.players.domain.repository.PlayerRepository;
 import java.util.List;
 
