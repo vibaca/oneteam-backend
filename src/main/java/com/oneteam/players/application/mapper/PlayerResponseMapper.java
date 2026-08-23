@@ -6,9 +6,7 @@ import com.oneteam.players.domain.model.valueobjects.Nationality;
 import com.oneteam.players.domain.model.valueobjects.PhotoUrl;
 import com.oneteam.players.domain.model.valueobjects.PlayerId;
 import com.oneteam.players.domain.model.valueobjects.PlayerName;
-import org.springframework.stereotype.Component;
 
-@Component
 public class PlayerResponseMapper {
 
     public PlayerResponseDto toDto(Player player) {
