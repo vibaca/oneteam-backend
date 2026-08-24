@@ -40,9 +40,32 @@ To clean previous build artifacts and compile the project, run:
 ./gradlew test --tests "com.oneteam.players.domain.*"
 ```
 
+Run the application:
+You can run it directly from your IDE (IntelliJ IDEA) by executing the main application class, or via the terminal using Gradle:
+
+```bash
+./gradlew bootRun
+```
+
+API Documentation (Swagger UI)
+Once the application is running, you can explore and test all available endpoints interactively via Swagger UI:
+
+```bash
+http://localhost:8080/swagger-ui/index.html
+```
+
 ---
 
 ## Project Structure
-src/main/java/com/oneteam - Main application source code (Domain, Infrastructure, Application layers).
-
-src/test/java/com/oneteam - Unit and integration tests.
+The project follows a strict Hexagonal Architecture layout split by feature modules:
+src/
+├── main/
+│   └── java/
+│       └── com/oneteam/
+│           └── players/
+│               ├── domain/               # Business models, aggregates, and domain rules (Pure Java)
+│               ├── application/          # Use cases (Query/Command handlers), ports (in/out), and DTOs
+│               └── infrastructure/       # Adapters (JPA repositories, REST controllers), configs, and beans
+└── test/
+└── java/
+└── com/oneteam                   # Unit and integration test suites
