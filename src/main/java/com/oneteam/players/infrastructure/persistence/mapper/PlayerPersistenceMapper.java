@@ -25,4 +25,21 @@ public class PlayerPersistenceMapper {
                 new Nationality(entity.getNationalityName(), entity.getIsoCode(), entity.getFlagUrl())
         );
     }
+
+    public PlayerEntity toEntity(Player player) {
+        if (player == null) {
+            return null;
+        }
+
+        var nationality = player.getNationality();
+
+        return new PlayerEntity(
+                player.getId().value().toString(),
+                player.getName().value(),
+                player.getPhotoUrl().valueOrNull(),
+                nationality.name(),
+                nationality.isoCode(),
+                nationality.flagUrl()
+        );
+    }
 }

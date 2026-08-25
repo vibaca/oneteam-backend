@@ -29,6 +29,15 @@ public class PlayerEntity {
 
     public PlayerEntity() {}
 
+    public PlayerEntity(String id, String name, String photoUrl, String nationalityName, String isoCode, String flagUrl) {
+        this.id = id;
+        this.name = name;
+        this.photoUrl = photoUrl;
+        this.nationalityName = nationalityName;
+        this.isoCode = isoCode;
+        this.flagUrl = flagUrl;
+    }
+
     public String getId() {
         return id;
     }

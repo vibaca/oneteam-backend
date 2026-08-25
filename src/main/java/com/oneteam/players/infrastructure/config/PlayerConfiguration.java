@@ -1,7 +1,9 @@
 package com.oneteam.players.infrastructure.config;
 
+import com.oneteam.players.application.command.CreatePlayerCommandHandler;
 import com.oneteam.players.application.mapper.PlayerResponseMapper;
 import com.oneteam.players.application.query.FindAllPlayersQueryHandler;
+import com.oneteam.players.application.port.out.PlayerCommandOutputPort;
 import com.oneteam.players.application.port.out.PlayerQueryOutputPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,5 +22,13 @@ public class PlayerConfiguration {
             PlayerResponseMapper playerResponseMapper
     ) {
         return new FindAllPlayersQueryHandler(playerQueryOutputPort, playerResponseMapper);
+    }
+
+    @Bean
+    public CreatePlayerCommandHandler createPlayerCommandHandler(
+            PlayerCommandOutputPort playerCommandOutputPort,
+            PlayerResponseMapper playerResponseMapper
+    ) {
+        return new CreatePlayerCommandHandler(playerCommandOutputPort, playerResponseMapper);
     }
 }
