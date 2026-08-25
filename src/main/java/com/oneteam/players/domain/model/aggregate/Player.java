@@ -5,6 +5,7 @@ import com.oneteam.players.domain.model.valueobjects.PhotoUrl;
 import com.oneteam.players.domain.model.valueobjects.PlayerId;
 import com.oneteam.players.domain.model.valueobjects.PlayerName;
 
+import java.util.UUID;
 import java.util.Objects;
 
 public class Player {
@@ -20,6 +21,9 @@ public class Player {
         this.nationality = Objects.requireNonNull(nationality, "Nationality is required");
     }
 
+    public static Player create(PlayerName name, PhotoUrl photoUrl, Nationality nationality) {
+        return new Player(new PlayerId(UUID.randomUUID()), name, photoUrl, nationality);
+    }
     public void updateProfile(PlayerName name, PhotoUrl photoUrl, Nationality nationality) {
         this.name = Objects.requireNonNull(name, "Player name is required");
         this.photoUrl = photoUrl != null ? photoUrl : new PhotoUrl(null);
